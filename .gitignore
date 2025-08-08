@@ -7,12 +7,26 @@
 # Build results
 bin/
 obj/
+out/
 
 # IIS Express
 *.vsidx
 *.dbmdl
 *.log
 
+# NuGet Packages
+*.nupkg
+packages/
+*.snupkg
+
+# Entity Framework
+Migrations/
+
+# Configuration
+appsettings.*.json
+
 # Others
 *.DS_Store
 *.swp
+*.bak
+Database/*.bak
