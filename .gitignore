@@ -1,0 +1,18 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+
+# IIS Express
+*.vsidx
+*.dbmdl
+*.log
+
+# Others
+*.DS_Store
+*.swp
