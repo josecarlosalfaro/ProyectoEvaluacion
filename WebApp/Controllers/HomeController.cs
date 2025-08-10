@@ -1,8 +1,8 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using ProyectoEvaluacion.Models;
+using System.Diagnostics;
+using WebApp.Models;
 
-namespace ProyectoEvaluacion.Controllers
+namespace WebApp.Controllers
 {
     public class HomeController : Controller
     {
