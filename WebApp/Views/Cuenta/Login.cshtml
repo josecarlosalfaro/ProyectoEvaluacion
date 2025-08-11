@@ -1,19 +1,55 @@
 ﻿@model WebApp.Models.LoginViewModel
 
-<h2>Iniciar Sesión</h2>
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Iniciar Sesión</h2>
 
-<form asp-action="Login" method="post">
-    <form asp-action="LoginSimple" method="post">
-        <input asp-for="Nombre" />
-        <input asp-for="Contrasenia" type="password" />
-        <button type="submit">Login Simple</button>
-    </form>
+    <div class="row">
+        <!-- Login Avanzado -->
+        <div class="col-md-6">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-primary text-white">
+                    Login Avanzado
+                </div>
+                <div class="card-body">
+                    <form asp-action="LoginAvanzado" method="post">
+                        <div class="mb-3">
+                            <label asp-for="Nombre" class="form-label"></label>
+                            <input asp-for="Nombre" class="form-control" />
+                            <span asp-validation-for="Nombre" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Contrasenia" class="form-label"></label>
+                            <input asp-for="Contrasenia" class="form-control" type="password" />
+                            <span asp-validation-for="Contrasenia" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Acceder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-    <form asp-action="LoginAvanzado" method="post">
-        <input asp-for="Nombre" />
-        <input asp-for="Contrasenia" type="password" />
-        <button type="submit">Login Avanzado</button>
-    </form>
-</form>
-
-
+        <!-- Login Simple -->
+        <div class="col-md-6">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-secondary text-white">
+                    Login Simple
+                </div>
+                <div class="card-body">
+                    <form asp-action="LoginSimple" method="post">
+                        <div class="mb-3">
+                            <label asp-for="Nombre" class="form-label"></label>
+                            <input asp-for="Nombre" class="form-control" />
+                            <span asp-validation-for="Nombre" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Contrasenia" class="form-label"></label>
+                            <input asp-for="Contrasenia" class="form-control" type="password" />
+                            <span asp-validation-for="Contrasenia" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-secondary w-100">Acceder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

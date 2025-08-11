@@ -24,10 +24,6 @@ namespace DtaAccess.BsnLogic.Context
         {
             modelBuilder.Entity<Usuario>()
                 .HasOne(u => u.Grupo)
-                .WithMany()
-                .HasForeignKey(u => u.IdGrupo);
-            modelBuilder.Entity<Usuario>()
-                .HasOne(u => u.Grupo)
                 .WithMany(g => g.Usuarios)
                 .HasForeignKey(u => u.IdGrupo);
         }

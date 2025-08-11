@@ -13,7 +13,9 @@ namespace DtaAccess.BsnLogic.Models
         [Key]
         public int IdFormulaMaterial { get; set; }
         public int IdFormula { get; set; }
+        public Formula Formula { get; set; }
         public int IdProducto { get; set; }
+        public Producto Producto { get; set; }
         public decimal Cantidad { get; set; }
 
     }

@@ -26,6 +26,7 @@ namespace WebApp.Controllers
         {
             var usuario = await _context.Usuario
                 .FirstOrDefaultAsync(u => u.Nombre == model.Nombre && u.ContraseniaHash == model.Contrasenia);
+            var producto = await _context.Producto.FirstOrDefaultAsync();
 
             if (usuario == null)
                 return View("Login");
