@@ -14,3 +14,20 @@ Instrucciones de despliegue:
 	• Validar que el pool de aplicaciones esté configurado para .NET Core
 	• Desplegar
 	• Navegar a http://localhost:puertoelegido
+
+Para Habilitar IIS:
+Características de Windows:
+Marca la casilla que dice “Internet Information Services” y las siguientes:
+	Servidor Web (IIS)
+	Características comunes de HTTP
+	Compatibilidad con ASP.NET
+	.NET Extensibility
+	CGI
+	Autenticación básica o Windows
+Application Development Features
+	ASP.NET
+	.NET Extensibility
+	CGI
+	ISAPI Extensions e ISAPI Filters
+Security
+	Autenticación básica o Autenticación de Windows
