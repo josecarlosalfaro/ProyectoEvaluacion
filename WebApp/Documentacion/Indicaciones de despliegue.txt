@@ -1,0 +1,16 @@
+Instrucciones de despliegue:
+
+1.	Clonar repositorio
+2.	Ejecutar script de Base de Datos ubicado en WebApp/DataBase/ProyectoEvaluacionDb.sql
+3.	Modificar la cadena de conexión con credenciales de SQLServer en el archivo appsettings.json
+4.	Abrir PowerShell para desarrolladores, ubicarse  en la carpeta clonada
+5.  Crear esta ruta y dar permisos de administrador C:\inetpub\MyApp
+5.	Ejecutar este comandodotnet publish --configuration Release --output "C:\inetpub\MyApp", esto crea el compilado que se coloca en IIS
+6.  Verificar que IIS este habilitado, o de lo contrario habilitarlo desde Activar o desactivar características de Windows
+7.	Crear un sitio web
+	• Nombre: MyApp
+	• Puerto: 80 o uno elegido
+	• Ruta Física: C:\inetpub\MyApp
+	• Validar que el pool de aplicaciones esté configurado para .NET Core
+	• Desplegar
+	• Navegar a http://localhost:puertoelegido
