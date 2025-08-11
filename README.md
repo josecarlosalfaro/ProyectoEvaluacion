@@ -2,9 +2,13 @@ ProyectoEvaluacion:
 
 Aplicación web ASP.NET Core 8 con arquitectura en capas, autenticación por grupos, funcionalidad maestro-detalle y despliegue en IIS.
 
+o Descripción:
+  La rama master contine el proyecto completo, para fines de clonación y uso de la solución
+  Se encuentra proceso de construcción desde cero y pasos de despliegue en WebApp/Documentacion/
+  
 o Base de datos
 
-El script de creación se encuentra en /Database/ProyectoEvaluacionDb.sql.
+El script de creación se encuentra en WebApp/Database/ProyectoEvaluacionDb.sql.
 
 o Para restaurar:
 
@@ -23,8 +27,7 @@ o Buenas prácticas aplicadas:
 Índices en campos clave
 PascalCase
 
-o Próximos pasos:
+o Se integro funcionalidad de:
 
-Implementar lógica de negocio
-Crear vistas dinámicas
-Integrar seguridad por grupo
+Seguridad por grupo y login sencillo
+Vista dinámica para agregar materiales a la formula de un producto
