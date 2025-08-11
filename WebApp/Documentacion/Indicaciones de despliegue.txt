@@ -14,7 +14,7 @@ Instrucciones de despliegue:
 	• Validar que el pool de aplicaciones esté configurado para .NET Core
 	• Desplegar
 	• Navegar a http://localhost:puertoelegido
-
+8. 
 Para Habilitar IIS:
 Características de Windows:
 Marca la casilla que dice “Internet Information Services” y las siguientes:
@@ -31,3 +31,19 @@ Application Development Features
 	ISAPI Extensions e ISAPI Filters
 Security
 	Autenticación básica o Autenticación de Windows
+
+9. Configurar el web Config, validar que en arguments tenga el mismo nombre del proyecto
+
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.webServer>
+    <handlers>
+      <add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModuleV2" resourceType="Unspecified" />
+    </handlers>
+    <aspNetCore processPath="dotnet" arguments=".\WebApp.dll" stdoutLogEnabled="false" stdoutLogFile=".\logs\stdout" hostingModel="inprocess" />
+  </system.webServer>
+</configuration>
+
+10. Instalar el .NET Core Hosting Bundle ya que es obligatorio para ASP.NET Core, Elegir .NET 8.0
+11. Reiniciar el IIS
+12. Validar ruta http://localhost:puertoelegido
